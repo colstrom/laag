@@ -1,0 +1,23 @@
+#+TITLE: laag - Library as a Gem
+#+LATEX: \pagebreak
+
+* Overview
+  
+  ~laag~ is a library to support packaging libraries as Ruby Gems.
+
+* Why does this exist?
+
+  Ruby is portable and readily available on all significant platforms. It has
+  solid tools for dependency management, versioning, and vendoring.
+
+  ~laag~ leverages these tools to provide platform-native libraries, so that
+  other Gems that need those libraries can be easier to install.
+
+* License
+
+  ~laag~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See ~LICENSE.txt~ for the full
+  text.
+
+* Contributors
+
+  - [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
