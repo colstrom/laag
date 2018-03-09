@@ -65,11 +65,11 @@ module LAAG
     end
 
     def default!
-      make! :clean
       configure!
       make!
       make! :install
       make! :clean
+      make!(:clean)          unless disabled?('pre-clean')
     end
 
     #############
