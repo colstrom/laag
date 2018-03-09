@@ -64,9 +64,9 @@ module LAAG
       ].flatten.compact.uniq
     end
 
-    def default!
+    def default!(configure: [])
       make!(:clean)          unless disabled?('pre-clean')
-      configure!             unless disabled?(:configure)
+      configure!(*configure) unless disabled?(:configure)
       make!                  unless disabled?(:build)
       make! :install         unless disabled?(:install)
       make! :clean           unless disabled?('post-clean')
