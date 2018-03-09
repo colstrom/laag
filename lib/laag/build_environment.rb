@@ -67,8 +67,8 @@ module LAAG
     def default!
       configure!
       make!
-      make! :install
       make!(:clean)          unless disabled?('pre-clean')
+      make! :install         unless disabled?(:install)
       make! :clean           unless disabled?('post-clean')
     end
 
