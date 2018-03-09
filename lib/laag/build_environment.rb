@@ -49,7 +49,6 @@ module LAAG
     end
 
     def make!(*arguments, make: ENV['MAKE'] || ENV['make'] || 'make')
-      configure! unless file?(makefile)
       return     unless file?(makefile)
       execute! make, "-j#{make_jobs}", arguments
     end
