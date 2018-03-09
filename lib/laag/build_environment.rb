@@ -62,7 +62,7 @@ module LAAG
         ('--enable-static'                   unless disabled?(:static)),
         ('--with-pic'                        unless disabled?(:pic)),
         *arguments
-      ].compact.uniq
+      ].flatten.compact.uniq
     end
 
     def default!
